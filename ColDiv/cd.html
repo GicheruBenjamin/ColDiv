@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .check{
+            display: none;
+        }
+        .content{
+            max-height: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: max-height 1s linear 1;
+        }
+        .check:checked + .content{
+            max-height: 100vh;
+            background-color: black;
+            color: antiquewhite;
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <p>ColDiv</p></header>
+    <main>
+        <label for="check" class="btn">Toogle</label>
+        <input type="checkbox" class="check" id="check">
+        <div class="content">
+            <p>
+                Lorem ipsum dolor sit amet
+                consectetur, adipisicing 
+                elit. Adipisci, repudiandae.</p>
+        </div>
+    </main>
+</body>
+</html>
